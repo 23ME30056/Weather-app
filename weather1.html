@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<style>
+    *{
+       box-sizing: border-box;
+       border:none;
+       outline: none;
+    }
+    body{
+    background-image:url('/weather app/bubuonly.jpg');
+    background-size: contain;
+        min-height:100vh;
+        background-color: black;
+         display:flex;
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .container{
+        border:8px solid red;
+        width:400px;
+        padding:30px;
+        border-radius: 13px;
+        background-color: white;
+    }
+    .header{
+        width:100%;
+        height: min-content;
+        display: flex;
+         justify-content: space-between; 
+    }
+    
+.text input{
+   width: 84%;
+    font-size:20px;
+    text-transform: capitalize;
+    color:black;
+    background-color: azure;
+    padding:12px 16px;
+    border-radius:15px;
+
+}
+.text input::placeholder{
+    color:black;
+}
+.text button{
+    background-color: wheat;
+    font-size: 20px;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+.text button:hover{
+    color: white;
+    background-color: gray;
+}
+.weather-body img{
+    width:60%;
+}
+.weather-body{
+     justify-content: center; 
+     align-items: center; 
+     flex-direction: column; 
+    margin-block: 20px;
+     display: none; 
+}
+
+.weather-box{
+    margin-block: 20px;
+    text-align: center; 
+}
+
+.weather-box .temperature{
+    font-size: 40px;
+    font-weight: 800;
+    position: relative;
+}
+
+.weather-box .temperature sup{
+    font-size: 20px;
+    position: absolute;
+    font-weight: 600;
+}
+
+.weather-box .description{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.weather-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.humidity, .wind{
+    display: flex;
+    align-items: center;
+}
+
+.humidity{
+    margin-left: 20px;
+}
+
+.wind{
+    margin-right: 20px;
+}
+
+.weather-details i{
+    font-size: 36px;
+}
+
+.weather-details .text{
+    margin-left: 10px;
+    font-size: 16px;
+    
+}
+
+.text span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.location-not-found{
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location-not-found h1{
+    font-size: 20px;
+    color: #6b6b6b;
+    margin-block-end: 15px;
+}
+.location-not-found img{
+    width: 80%;
+}
+ .description{
+    font-weight:600 ;
+ }
+ body{
+    display:flex;
+    flex-direction: column;
+ }
+ .footer {
+    margin-top: 90px;
+      width:100% ;
+  text-align: center;
+  padding: 3px;
+     margin-left:0px;
+  background-color: rgb(225, 220, 60);
+  color: black ; 
+ }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        
+            <div class="text">
+            <input type="text" placeholder="enter your location" class="input-box">
+            <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
+        </div>
+    </div>
+    <div class="location-not-found">
+        <h1>Sorry, Location not found!!!</h1>
+        <img src="/weather app/assets/404.png" alt="404 Error">
+    </div>
+
+
+    <div class="weather-body">
+
+        <img src="/weather app/assets/cloud.png" alt="" class ="weather-image"><div> 
+            <div class="weather-box">
+              <p class="temperature">0<sup>°C </sup></p>
+              <p class="description">Light rain</p>
+            </div>
+            <div class="weather-details">
+                <div class="humidity">
+                    <i class="fa-sharp fa-solid fa-droplet"></i>
+                    <div class="text">
+                        <span id="humidity">45%</span>
+                        <p class="description">Humidity</p>
+                    </div>
+                </div>
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span id="wind-speed">12Km/H</span>
+                    <p class="description">Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="script.js"></script>
+</div>
+<div class="footer">
+  <p><h2>>Author: shaunak-majumdar.....</h2> All rights reserved including copyright,patents....<br>
+  <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTRsZJmBJRXLCnMmVJZtkJBtkPWKZfdPPxfSrKZptDqnswkngksFGdKBkmMTtSBrMNmpFB" target="blank"><h2>Mail us for further queries</h2>
+  </a></p>
+</footer>
+<script src="https://kit.fontawesome.com/8c5d820ece.js" crossorigin="anonymous"></script>
+</body>
+</html>
